@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Edit Student</title>
+</head>
+<body>
+<h2>Edit Student Information</h2>
+<form th:action="@{/eregistrar/students/{id}(id=${student.studentId})}" th:object="${student}" method="post">
+    <!-- Same fields as register.html -->
+    <button type="submit">Update</button>
+</form>
+<a th:href="@{/eregistrar/home}">Back to Home</a>
+</body>
+</html>
